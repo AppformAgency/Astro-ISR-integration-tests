@@ -9,7 +9,7 @@ $ yarn add -D git+https://github.com/AppformAgency/Astro-ISR-Integration
 ```ts
 import {defineConfig} from 'astro/config';
 
-import ISR from 'astro/isr';
+import ISR from '@astro/isr';
 
 export default defineConfig({
   integrations: [ISR()],
@@ -23,7 +23,8 @@ export default defineConfig({
 ```ts
 // src/pages/blog/[slug].astro
 import type {GetStaticPaths} from 'astro';
-import {ENV, parseParams} from 'astro/isr/utils';
+
+import {ENV, parseParams} from '@astro/isr/utils';
 
 type Params = {
   slug: string;
@@ -34,12 +35,10 @@ export const getStaticPaths = (async () => {
     const params = parseParams() as Params;
 
     // fetch blog post from database...
-
     return [];
   }
 
   // fetch all blog posts
-
   return [];
 }) satisfies GetStaticPaths;
 
