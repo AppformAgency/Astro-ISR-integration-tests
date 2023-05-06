@@ -1,6 +1,7 @@
 {
   "name": "@astro/isr",
   "private": true,
+  "version": "1.0.0",
   "keywords": [
     "astro-integration"
   ],
