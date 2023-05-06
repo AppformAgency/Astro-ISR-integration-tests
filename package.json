@@ -6,7 +6,8 @@
     "astro-integration"
   ],
   "files": [
-    "./integration.ts"
+    "./integration.ts",
+    "./utils.ts"
   ],
   "main": "./integration.ts",
   "devDependencies": {
