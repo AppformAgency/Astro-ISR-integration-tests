@@ -6,10 +6,10 @@
     "astro-integration"
   ],
   "files": [
-    "./integration.ts",
-    "./utils.ts"
+    "./src/integration.ts",
+    "./src/utils.ts"
   ],
-  "main": "./integration.ts",
+  "main": "./src/integration.ts",
   "devDependencies": {
     "@types/node": "^20.1.0",
     "astro": "^2.4.2"
