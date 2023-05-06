@@ -1,3 +1,9 @@
+# Install
+
+```bash
+$ yarn add -D git+https://github.com/AppformAgency/Astro-ISR-Integration
+```
+
 # Import
 
 ```ts
