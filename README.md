@@ -8,13 +8,11 @@ $ yarn add -D git+https://github.com/AppformAgency/Astro-ISR-Integration
 
 ```ts
 import {defineConfig} from 'astro/config';
-import ISR from 'isr/integration.ts';
+
+import ISR from '@astro/isr';
 
 export default defineConfig({
-  integrations: [
-    ISR(),
-    // rest...
-  ],
+  integrations: [ISR()],
 });
 ```
 
