@@ -1,16 +1,16 @@
 import type {AstroIntegration} from 'astro';
+import {ENV} from './utils';
 
 export default function integration(): AstroIntegration | undefined {
-  if (process.env.ROUTE) {
+  if (ENV.route) {
     return {
       name: 'ISR',
       hooks: {
         'astro:build:setup': ({pages}) => {
-          pages.forEach(({route: page}, pageKey) => {
-            if (page.route !== process.env.ROUTE) {
-              pages.delete(pageKey);
-            }
-          });
+          const routeData = pages.get(ENV.route!);
+
+          pages.clear();
+          pages.set(ENV.route!, routeData!);
         },
 
         'astro:build:done': ({pages}) => {
