@@ -1,4 +1,5 @@
 import type {AstroIntegration} from 'astro';
+
 import {ENV} from './utils';
 
 export default function integration(): AstroIntegration | undefined {
