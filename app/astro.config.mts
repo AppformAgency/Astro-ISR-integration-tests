@@ -1,6 +1,6 @@
 import {defineConfig} from 'astro/config';
 
-import ISR from '../package/integration';
+import ISR from '../isr/integration';
 
 export default defineConfig({
   build: {

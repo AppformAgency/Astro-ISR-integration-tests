@@ -5,11 +5,11 @@
   "keywords": [
     "astro-integration"
   ],
+  "main": "isr/index.ts",
   "files": [
-    "./integration.ts",
-    "./utils.ts"
+    "isr/integration.ts",
+    "isr/utils.ts"
   ],
-  "main": "./integration.ts",
   "devDependencies": {
     "@types/node": "^20.1.0"
   },
