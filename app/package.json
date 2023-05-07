@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "astro build"
+  },
+  "dependencies": {
+    "@astro/isr": "../",
+    "astro": "^2.4.1"
+  }
+}

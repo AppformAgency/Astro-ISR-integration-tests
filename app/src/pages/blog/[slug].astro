@@ -1,0 +1,37 @@
+---
+import type {GetStaticPaths} from 'astro';
+
+import {ENV, parseParams} from '@astro/isr/utils';
+
+type Params = {
+  slug: string;
+};
+
+export const getStaticPaths = (async () => {
+  if (ENV.route === '/blog/[slug]' && ENV.params) {
+    const params = parseParams() as Params;
+
+    return [
+      {
+        params,
+      },
+    ];
+  }
+
+  return [
+    {
+      params: {slug: 'post-1'},
+    },
+    {
+      params: {slug: 'post-2'},
+    },
+    {
+      params: {slug: 'post-3'},
+    },
+  ];
+}) satisfies GetStaticPaths;
+
+const {slug} = Astro.params as Params;
+---
+
+<h1>{slug}</h1>
