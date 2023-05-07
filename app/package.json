@@ -1,8 +1,0 @@
-{
-  "scripts": {
-    "build": "astro build"
-  },
-  "dependencies": {
-    "astro": "^2.4.1"
-  }
-}
