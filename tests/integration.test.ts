@@ -2,6 +2,10 @@ import {$} from 'zx';
 import {glob} from 'glob';
 
 describe('Astro build', () => {
+  afterAll(async () => {
+    await $`rm -rf app/dist/`;
+  });
+
   test('full project build', async () => {
     await $`npm run build`;
 

@@ -1,23 +1,11 @@
 {
-  "name": "@astro/isr",
-  "private": true,
-  "version": "1.0.0",
-  "keywords": [
-    "astro-integration"
-  ],
-  "main": "isr/index.ts",
-  "files": [
-    "isr/integration.ts",
-    "isr/utils.ts"
-  ],
   "devDependencies": {
-    "@types/node": "^20.1.0",
     "glob": "^10.2.2",
-    "typescript": "^5.0.4",
     "vitest": "^0.31.0",
     "zx": "^7.2.2"
   },
   "dependencies": {
+    "@astro/isr": "git+https://github.com/AppformAgency/ISR-package",
     "astro": "^2.4.2"
   },
   "scripts": {
