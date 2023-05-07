@@ -8,10 +8,11 @@ export default function integration(): AstroIntegration | undefined {
       name: 'ISR',
       hooks: {
         'astro:build:setup': ({pages}) => {
-          const routeData = pages.get(ENV.route!);
-
-          pages.clear();
-          pages.set(ENV.route!, routeData!);
+          pages.forEach(({route: page}, pageKey) => {
+            if (page.route !== ENV.route) {
+              pages.delete(pageKey);
+            }
+          });
         },
 
         'astro:build:done': ({pages}) => {

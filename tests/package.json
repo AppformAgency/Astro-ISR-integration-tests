@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "test": "vitest run --silent"
+  },
+  "devDependencies": {
+    "glob": "^10.2.2",
+    "typescript": "^5.0.4",
+    "vitest": "^0.31.0",
+    "zx": "^7.2.2"
+  },
+  "type": "module"
+}
